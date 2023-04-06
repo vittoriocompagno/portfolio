@@ -2,9 +2,9 @@ import Head from 'next/head';
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillTwitterCircle, AiFillLinkedin} from "react-icons/ai" ;
 import Image from 'next/image';
-import deved from '../public/propic.jpeg';
-import code from '../public/code.png';
-import { useState } from 'react';
+import deved from 'public/propic.jpeg';
+import code from 'public/code.png';
+import {useState} from 'react';
 
 export default function Home() {
   const [darkMode,setDarkMode] = useState(false);
