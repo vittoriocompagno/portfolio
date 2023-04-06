@@ -18,14 +18,14 @@ export default function Home() {
       </Head>
       <main className=' bg-slate-100 px-10 font-mono md:px-20 lg:px-40 dark:bg-slate-900 '>
         <section className='min-h-screen'>
-          <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className='text-xl text-black dark:text-teal-400'>Cats are superior</h1>
-            <ul className = 'flex items-center'>
+          <nav className='py-10 mb-12  flex justify-between'>
+            <h1 className=' text-black dark:text-teal-400 text-sm'>Cats are superior</h1>
+            <ul className = 'flex flex-row sm:flex-row items-center w-full sm:w-auto sm:text-sm'>
             
               <li>
-                <a className=' bg-gradient-to-r from-cyan-600 to-teal-500  text-white px-4 py-2 border-none rounded-md ml-4' href="###">My Resume</a>
+                <a className=' bg-gradient-to-r from-cyan-600 to-teal-500  text-white px-4 py-2 border-none rounded-md ml-4 ' href="###">Resume</a>
               </li>
-              <li className = 'border-none rounded-md ml-4 bg-gradient-to-r from-cyan-600 to-teal-500 px-4 py-2 text-xl'>
+              <li className = 'border-none rounded-md ml-8 bg-gradient-to-r from-cyan-600 to-teal-500 px-4 py-2 text-xl'>
                   <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer text-white'/>
               </li>
             </ul>
