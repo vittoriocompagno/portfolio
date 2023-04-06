@@ -21,11 +21,12 @@ export default function Home() {
           <nav className='py-10 mb-12 flex justify-between'>
             <h1 className='text-xl text-black dark:text-teal-400'>Cats are superior</h1>
             <ul className = 'flex items-center'>
-              <li>
-                  <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer text-2xl text-black dark:text-white'/>
-              </li>
+            
               <li>
                 <a className=' bg-gradient-to-r from-cyan-600 to-teal-500  text-white px-4 py-2 border-none rounded-md ml-4' href="###">My Resume</a>
+              </li>
+              <li className = 'border-none rounded-md ml-4 bg-gradient-to-r from-cyan-600 to-teal-500 px-4 py-2 text-xl'>
+                  <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer text-white'/>
               </li>
             </ul>
           </nav>
