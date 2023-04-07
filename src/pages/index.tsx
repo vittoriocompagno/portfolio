@@ -82,7 +82,7 @@ export default function Home() {
                  <h3 className='pt-2 pb-2 text-2xl font-medium text-left  text-teal-700 dark:text-teal-400'> ETL Developer </h3>
                  <h2 className='text-lg text-left mb-3 dark:text-gray-200 text-gray-500'> GFT Technologies - June 2022 </h2>
                  <p className='text-left leading-6.5'>
-                  aaa</p>
+                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
               </div>
             </div>
           </div>
