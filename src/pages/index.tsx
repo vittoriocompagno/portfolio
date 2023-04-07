@@ -1,11 +1,26 @@
 import Head from 'next/head';
-import {BsFillMoonStarsFill} from 'react-icons/bs';
-import {AiFillTwitterCircle, AiFillLinkedin} from "react-icons/ai" ;
+import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 import Image from 'next/image';
 import deved from 'public/propic.jpeg';
-import code from 'public/code.png';
-import {useState} from 'react';
-import { open } from 'fs';
+import { useState } from 'react';
+import ExperienceCard from '../pages/ExperienceCard';
+
+const experiences = [
+  {
+    title: 'ETL Developer',
+    company: 'GFT Technologies',
+    date: 'June 2022',
+    description:
+      'As an ETL Developer at GFT Technologies, my role revolves around managing data to empower our company\'s decision-making process. Utilizing <b> Oracle SQL, Bash, Git, and Datastage </b>, I focus on the extraction, transformation, and loading of complex data sets. By ensuring data is clean and well-integrated, I provide a solid foundation for our team to build upon. My expertise in these technologies, combined with a dedication to professionalism and accuracy, allows me to contribute significantly to GFT Technologies\' data-driven success.',
+  },
+  {
+    title: 'ETL Developer',
+    company: 'GFT Technologies',
+    date: 'June 2022',
+    description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+  },
+];
 
 export default function Home() {
   const [darkMode,setDarkMode] = useState(true);
@@ -55,39 +70,17 @@ export default function Home() {
               </a>
             </div>
         </section>
-        <section className='min-h-screen flex items-center justify-center'>
-          <div className='grid justify-items-center lg:flex gap-10 my-10'>
-            <div className='max-w-lg'>
-               <div className='text-center shadow-2xl p-10 rounded-xl  bg-slate-200 text-black dark:text-white dark:bg-slate-800'>
-               {  /*
-                <div className='flex justify-center'>
-                < Image src={code}  height={100} width={100} alt = 'miao'/>
-                </div>
-                */
-              } 
-                 <h3 className='pt-2 pb-2 text-2xl font-medium text-left  text-teal-700 dark:text-teal-400'> ETL Developer </h3>
-                 <h2 className='text-lg text-left mb-3 dark:text-gray-200 text-gray-500'> GFT Technologies - June 2022 </h2>
-                 <p className='text-left leading-6.5'>
-                 As an ETL Developer at GFT Technologies, my role revolves around managing data to empower our company's decision-making process. Utilizing <b> Oracle SQL, Bash, Git, and Datastage </b>, I focus on the extraction, transformation, and loading of complex data sets. By ensuring data is clean and well-integrated, I provide a solid foundation for our team to build upon. My expertise in these technologies, combined with a dedication to professionalism and accuracy, allows me to contribute significantly to GFT Technologies' data-driven success.                         </p>
-               </div>
-            </div>
-            <div className='max-w-lg'>
-               <div className='text-center shadow-2xl p-10 rounded-xl bg-slate-200 text-black dark:text-white dark:bg-slate-800'>
-               {  /*
-                <div className='flex justify-center'>
-                < Image src={code}  height={100} width={100} alt = 'miao'/>
-                </div>
-                */
-              } 
-                 <h3 className='pt-2 pb-2 text-2xl font-medium text-left  text-teal-700 dark:text-teal-400'> ETL Developer </h3>
-                 <h2 className='text-lg text-left mb-3 dark:text-gray-200 text-gray-500'> GFT Technologies - June 2022 </h2>
-                 <p className='text-left leading-6.5'>
-                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-              </div>
-            </div>
+        <section className='pt-20 pb-10 flex items-center justify-center'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
+            {experiences.map((experience, index) => (<ExperienceCard key={index} {...experience} />))}
           </div>
         </section>
+
+        <footer>
+
+        </footer>
       </main>
     </div>
   )
 }
+
