@@ -19,7 +19,7 @@ const experiences = [
     company: 'GFT Technologies',
     date: 'June 2022',
     description: 
-      'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+      'aaaaaaaaaaaaaa',
   },
 ];
 
