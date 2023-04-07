@@ -8,7 +8,7 @@ import {useState} from 'react';
 import { open } from 'fs';
 
 export default function Home() {
-  const [darkMode,setDarkMode] = useState(false);
+  const [darkMode,setDarkMode] = useState(true);
   return (
     <div className={darkMode?"dark":""}>
       <Head>
@@ -37,9 +37,9 @@ export default function Home() {
           <div className= 'text-black dark:text-white text-center p-8 mx-auto max-w-2xl'>
             <h1 className=' text-5xl text-teal-700 dark:text-teal-400 font-medium'>Vittorio Compagno</h1>
             <h3 className=' text-2xl pt-5 text-teal-700 dark:text-teal-400'>Developer</h3>
-            <div className='text-justify text-medium py-4 leading-6.5'>  
+            <div className='justify-center text-medium py-4 leading-6.5'>  
               <p>
-              Welcome to Vittorio Compagno's <b>portfolio website</b>: a vibrant hub where creativity meets code. As an innovative software developer with a passion for crafting elegant solutions to complex problems, I'm excited to showcase my diverse skillset and ever-growing portfolio. 
+              Welcome to Vittorio Compagno's <b>portfolio website</b>: a vibrant hub where creativity meets code. I'm a software developer with a passion for crafting elegant solutions to complex problems.
               </p>
               <p>
               <br /> Browse through my projects that demonstrate my expertise in cutting-edge technologies and commitment to delivering exceptional user experiences. <b> Let's collaborate and shape the future of technology, one line of code at a time! </b>
@@ -55,18 +55,35 @@ export default function Home() {
               </a>
             </div>
         </section>
-        <section className='min-h-screen'>
-          <div className='lg:flex gap-10 py-10'>
-            <div className='lg:flex gap-10'>
-             <div className='text-center shadow-2xl p-10 rounded-xl my-10 bg-slate-200 text-black dark:text-white dark:bg-slate-800'>
-               <div className='flex justify-center'>
-               < Image src={code}  height={100} width={100} alt = 'miao'/>
+        <section className='min-h-screen flex items-center justify-center'>
+          <div className='grid justify-items-center lg:flex gap-10 my-10'>
+            <div className='max-w-lg'>
+               <div className='text-center shadow-2xl p-10 rounded-xl  bg-slate-200 text-black dark:text-white dark:bg-slate-800'>
+               {  /*
+                <div className='flex justify-center'>
+                < Image src={code}  height={100} width={100} alt = 'miao'/>
+                </div>
+                */
+              } 
+                 <h3 className='pt-2 pb-2 text-2xl font-medium text-left  text-teal-700 dark:text-teal-400'> ETL Developer </h3>
+                 <h2 className='text-lg text-left mb-3 dark:text-gray-200 text-gray-500'> GFT Technologies - June 2022 </h2>
+                 <p className='text-left leading-6.5'>
+                 As an ETL Developer at GFT Technologies, my role revolves around managing data to empower our company's decision-making process. Utilizing <b> Oracle SQL, Bash, Git, and Datastage </b>, I focus on the extraction, transformation, and loading of complex data sets. By ensuring data is clean and well-integrated, I provide a solid foundation for our team to build upon. My expertise in these technologies, combined with a dedication to professionalism and accuracy, allows me to contribute significantly to GFT Technologies' data-driven success.                         </p>
                </div>
-               <h3 className='pt-10 pb-2 text-2xl font-medium text-left  text-teal-700 dark:text-teal-400'> ETL Developer </h3>
-               <h2 className='text-lg text-left mb-3 dark:text-gray-200 text-gray-500'> GFT Technologies - June 2022 </h2>
-               <p className='text-justify leading-6.5'>
-               As an ETL Developer at GFT Technologies, my role revolves around managing data to empower our company's decision-making process. Utilizing <b> Oracle SQL, Bash, Git, and Datastage </b>, I focus on the extraction, transformation, and loading of complex data sets. By ensuring data is clean and well-integrated, I provide a solid foundation for our team to build upon. My expertise in these technologies, combined with a dedication to professionalism and accuracy, allows me to contribute significantly to GFT Technologies' data-driven success.                         </p>
-             </div>
+            </div>
+            <div className='max-w-lg'>
+               <div className='text-center shadow-2xl p-10 rounded-xl bg-slate-200 text-black dark:text-white dark:bg-slate-800'>
+               {  /*
+                <div className='flex justify-center'>
+                < Image src={code}  height={100} width={100} alt = 'miao'/>
+                </div>
+                */
+              } 
+                 <h3 className='pt-2 pb-2 text-2xl font-medium text-left  text-teal-700 dark:text-teal-400'> ETL Developer </h3>
+                 <h2 className='text-lg text-left mb-3 dark:text-gray-200 text-gray-500'> GFT Technologies - June 2022 </h2>
+                 <p className='text-left leading-6.5'>
+                  aaa</p>
+              </div>
             </div>
           </div>
         </section>
