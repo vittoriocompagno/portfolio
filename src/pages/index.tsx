@@ -18,7 +18,8 @@ const experiences = [
     title: 'ETL Developer',
     company: 'GFT Technologies',
     date: 'June 2022',
-    description: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    description: 
+      'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
   },
 ];
 
