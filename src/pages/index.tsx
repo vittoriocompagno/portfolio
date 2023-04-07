@@ -5,6 +5,7 @@ import Image from 'next/image';
 import deved from 'public/propic.jpeg';
 import code from 'public/code.png';
 import {useState} from 'react';
+import { open } from 'fs';
 
 export default function Home() {
   const [darkMode,setDarkMode] = useState(false);
@@ -30,38 +31,41 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className= 'text-black dark:text-white text-center p-8 mx-auto max-w-2xl md:text-xl'>
-            <h2 className=' text-5xl text-teal-700 dark:text-teal-400 font-medium'>Vittorio Compagno</h2>
-            <h3 className=' text-2xl pt-5 text-teal-700 dark:text-teal-400'>Developer</h3>
-            <p className='text-medium py-4 leading-7'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget pharetra dolor. Nulla hendrerit fermentum felis, id malesuada velit scelerisque sit amet. Duis sed nunc id eros iaculis condimentum vel sed nisl. Proin venenatis fringilla porttitor. Nulla rutrum elit et consequat tempus. Fusce tincidunt ut nisl sit amet pharetra. Vivamus nec imperdiet nunc. Quisque mattis dolor ut erat dictum feugiat. Nam lacinia urna maximus facilisis posuere.
-            </p>
-          </div>
-          <div className=' text-4xl flex justify-center gap-16 p-10 py-1 text-gray-400 dark:text-teal-400'>
-            <AiFillTwitterCircle/>
-            <AiFillLinkedin/>
-          </div>
-          <div className=' relative mx-auto  bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-10 mb-7 overflow-hidden'>
+          <div className=' relative mx-auto  bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 mt-10 mb-7 overflow-hidden'>
             <Image src={deved} alt= "That's me" fill objectFit='cover' />
           </div>
+          <div className= 'text-black dark:text-white text-center p-8 mx-auto max-w-2xl'>
+            <h1 className=' text-5xl text-teal-700 dark:text-teal-400 font-medium'>Vittorio Compagno</h1>
+            <h3 className=' text-2xl pt-5 text-teal-700 dark:text-teal-400'>Developer</h3>
+            <div className='text-justify text-medium py-4 leading-6.5'>  
+              <p>
+              Welcome to Vittorio Compagno's <b>portfolio website</b>: a vibrant hub where creativity meets code. As an innovative software developer with a passion for crafting elegant solutions to complex problems, I'm excited to showcase my diverse skillset and ever-growing portfolio. 
+              </p>
+              <p>
+              <br /> Browse through my projects that demonstrate my expertise in cutting-edge technologies and commitment to delivering exceptional user experiences. <b> Let's collaborate and shape the future of technology, one line of code at a time! </b>
+              </p>
+            </div>
+          </div>
+          <div className=' text-4xl flex justify-center gap-16 p-10 py-1 text-gray-400 dark:text-teal-400'>
+              <a href="https://www.twitter.com/comradvittorio" target='_blank' >
+                <AiFillTwitterCircle className='cursor-pointer'/>
+              </a>
+              <a href="https://www.linkedin.com/in/vittorio-compagno" target='_blank'>
+                <AiFillLinkedin className='cursor-pointer'/>
+              </a>
+            </div>
         </section>
         <section className='min-h-screen'>
-          <div className = 'mx-auto max-w-2xl text-black dark:text-white'>
-            <h3 className=' text-3xl pt-10 pb-3  text-teal-700 dark:text-teal-400 ' > What I do </h3>
-            <p className='text-mediumpy-5 leading-8 md:text-xl'> 
-            Morbi placerat turpis at nisl venenatis, eget sodales leo pretium. Vestibulum libero leo, bibendum vel condimentum sit amet, malesuada non diam. Aenean interdum volutpat libero, at pretium felis viverra vitae. Proin dictum, urna sed placerat lacinia, eros eros venenatis nunc, eu tincidunt diam massa non massa. Donec congue nulla vel mi semper fringilla cursus ut mi. Praesent sed ex rhoncus, mattis mi ut, porta magna. Etiam id accumsan mi.
-            </p>
-          </div>
           <div className='lg:flex gap-10 py-10'>
             <div className='lg:flex gap-10'>
              <div className='text-center shadow-2xl p-10 rounded-xl my-10 bg-slate-200 text-black dark:text-white dark:bg-slate-800'>
                <div className='flex justify-center'>
                < Image src={code}  height={100} width={100} alt = 'miao'/>
                </div>
-               <h3 className='pt-10 pb-2 text-lg font-medium  text-teal-700 dark:text-teal-400'> MIAO </h3>
-               <p>
-                 Donec id ipsum lectus. Quisque eu justo non massa tempus laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed sed suscipit eros. Maecenas hendrerit sit amet diam id hendrerit. Cras laoreet venenatis sem id cursus.
-               </p>
+               <h3 className='pt-10 pb-2 text-2xl font-medium text-left  text-teal-700 dark:text-teal-400'> ETL Developer </h3>
+               <h2 className='text-lg text-left mb-3 dark:text-gray-200 text-gray-500'> GFT Technologies - June 2022 </h2>
+               <p className='text-justify leading-6.5'>
+               As an ETL Developer at GFT Technologies, my role revolves around managing data to empower our company's decision-making process. Utilizing <b> Oracle SQL, Bash, Git, and Datastage </b>, I focus on the extraction, transformation, and loading of complex data sets. By ensuring data is clean and well-integrated, I provide a solid foundation for our team to build upon. My expertise in these technologies, combined with a dedication to professionalism and accuracy, allows me to contribute significantly to GFT Technologies' data-driven success.                         </p>
              </div>
             </div>
           </div>
