@@ -6,22 +6,6 @@ import deved from 'public/propic.jpeg';
 import { useState } from 'react';
 import ExperienceCard from '../pages/ExperienceCard';
 
-const experiences = [
-  {
-    title: 'ETL Developer',
-    company: 'GFT Technologies',
-    date: 'June 2022',
-    description:
-      'As an ETL Developer at GFT Technologies, my role revolves around managing data to empower our company\'s decision-making process. Utilizing <b> Oracle SQL, Bash, Git, and Datastage </b>, I focus on the extraction, transformation, and loading of complex data sets. By ensuring data is clean and well-integrated, I provide a solid foundation for our team to build upon. My expertise in these technologies, combined with a dedication to professionalism and accuracy, allows me to contribute significantly to GFT Technologies\' data-driven success.',
-  },
-  {
-    title: 'ETL Developer',
-    company: 'GFT Technologies',
-    date: 'June 2022',
-    description: 
-      'aaaaaaaaaaaaaa',
-  },
-];
 
 export default function Home() {
   const [darkMode,setDarkMode] = useState(true);
@@ -35,8 +19,10 @@ export default function Home() {
       </Head>
       <main className=' bg-slate-100 px-10 font-mono md:px-20 lg:px-40 dark:bg-slate-900 '>
         <section className='min-h-screen'>
-          <nav className='py-10 mb-12  flex justify-between'>
-            <h1 className=' text-black dark:text-teal-400 text-sm'>Cats are superior</h1>
+          <nav className='py-10 mb-12 '>
+            {/*
+            <h1 className=' text-black dark:text-teal-400 text-sm'>Welcome to my portfolio</h1>
+             !!!SET IN NAV
             <ul className = 'flex flex-row sm:flex-row items-center w-full sm:w-auto sm:text-sm'>
             
               <li>
@@ -46,11 +32,20 @@ export default function Home() {
                   <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer text-white'/>
               </li>
             </ul>
+            */}
+            <div className='flex justify-between gap-10'>
+              <div className='order-1'>
+               <h1 className=' text-black dark:text-teal-400 text-sm'>Developed by Vittorio Compagno</h1>
+              </div>
+              <div className='order-2'>
+                <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer dark:text-white text-black text-xl'/>
+              </div>
+            </div>
           </nav>
           <div className=' relative mx-auto  bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 mt-10 mb-7 overflow-hidden'>
             <Image src={deved} alt= "That's me" fill objectFit='cover' />
           </div>
-          <div className= 'text-black dark:text-white text-center p-8 mx-auto max-w-2xl'>
+          <div className= 'text-black dark:text-white text-center p-8 mx-auto max-w-2xl min-w-0'>
             <h1 className=' text-5xl text-teal-700 dark:text-teal-400 font-medium'>Vittorio Compagno</h1>
             <h3 className=' text-2xl pt-5 text-teal-700 dark:text-teal-400'>Developer</h3>
             <div className='justify-center text-medium py-4 leading-6.5'>  
@@ -61,8 +56,13 @@ export default function Home() {
               <br /> Browse through my projects that demonstrate my expertise in cutting-edge technologies and commitment to delivering exceptional user experiences. <b> Let's collaborate and shape the future of technology, one line of code at a time! </b>
               </p>
             </div>
+            <div className='text-center mt-5'>
+              <a className='text-xl bg-gradient-to-r from-blue-600 to-teal-700  text-white px-4 py-2 border-none rounded-md ml-4 ' download href='./Vittorio_Compagno_Resume_04-2023.pdf'>
+                Download my CV
+              </a>
+            </div>
           </div>
-          <div className=' text-4xl flex justify-center gap-16 p-10 py-1 text-gray-400 dark:text-teal-400'>
+          <div className='flex justify-center text-4xl gap-10 p-10 py-1 text-gray-400 dark:text-teal-400'>
               <a href="https://www.twitter.com/comradvittorio" target='_blank' >
                 <AiFillTwitterCircle className='cursor-pointer'/>
               </a>
@@ -71,10 +71,21 @@ export default function Home() {
               </a>
             </div>
         </section>
-        <section className='pt-20 pb-10 flex items-center justify-center'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
-            {experiences.map((experience, index) => (<ExperienceCard key={index} {...experience} />))}
-          </div>
+        <section className='pt-5 pb-10 flex items-center justify-center'>
+          <div className='grid grid-cols-1 gap-5'>
+              <ExperienceCard
+                title="ETL Developer"
+                company="GFT Technologies"
+                date="June 2022"
+                description="As an ETL Developer at GFT Technologies, my role revolves around managing data to empower our company's decision-making process. Utilizing Oracle SQL, Bash, Git, and Datastage, I focus on the extraction, transformation, and loading of complex data sets. By ensuring data is clean and well-integrated, I provide a solid foundation for our team to build upon. My expertise in these technologies, combined with a dedication to professionalism and accuracy, allows me to contribute significantly to GFT Technologies' data-driven success."
+              />
+              <ExperienceCard
+                title="ETL Developer"
+                company="GFT Technologies"
+                date="June 2022"
+                description="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              />
+            </div>
         </section>
 
         <footer>
