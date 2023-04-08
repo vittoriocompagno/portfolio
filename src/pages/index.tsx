@@ -6,7 +6,6 @@ import deved from 'public/propic.jpeg';
 import { useState } from 'react';
 import ExperienceCard from '../pages/ExperienceCard';
 
-
 export default function Home() {
   const [darkMode,setDarkMode] = useState(true);
   return (
@@ -20,19 +19,6 @@ export default function Home() {
       <main className=' bg-slate-100 px-10 font-mono md:px-20 lg:px-40 dark:bg-slate-900 '>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 '>
-            {/*
-            <h1 className=' text-black dark:text-teal-400 text-sm'>Welcome to my portfolio</h1>
-             !!!SET IN NAV
-            <ul className = 'flex flex-row sm:flex-row items-center w-full sm:w-auto sm:text-sm'>
-            
-              <li>
-                <a className=' bg-gradient-to-r from-cyan-600 to-teal-500  text-white px-4 py-2 border-none rounded-md ml-4 ' href="###">Resume</a>
-              </li>
-              <li className = 'border-none rounded-md ml-8 bg-gradient-to-r from-cyan-600 to-teal-500 px-4 py-2 text-xl'>
-                  <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer text-white'/>
-              </li>
-            </ul>
-            */}
             <div className='flex justify-between gap-10'>
               <div className='order-1'>
                <h1 className=' text-black dark:text-teal-400 text-sm'>Developed by Vittorio Compagno</h1>
