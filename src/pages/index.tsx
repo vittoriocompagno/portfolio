@@ -108,7 +108,7 @@ export default function Home() {
                   "Universität Salzburg",
                 ]}
                 dates={[
-                  "2021/09 - 2022/02",
+                  "2021/09 - 2023/10",
                   "2021/09 - 2022/02",
                 ]}
                 descriptions={[
