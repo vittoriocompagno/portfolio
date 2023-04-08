@@ -60,12 +60,14 @@ export default function Home() {
         <section className='pt-5 pb-10 flex items-center justify-center'>
           <div className='grid grid-cols-1 gap-5'>
               <ExperienceCard
+                category='Professional Experience'
                 title="ETL Developer"
                 company="GFT Technologies"
                 date="June 2022"
                 description="As an ETL Developer at GFT Technologies, my role revolves around managing data to empower our company's decision-making process. Utilizing Oracle SQL, Bash, Git, and Datastage, I focus on the extraction, transformation, and loading of complex data sets. By ensuring data is clean and well-integrated, I provide a solid foundation for our team to build upon. My expertise in these technologies, combined with a dedication to professionalism and accuracy, allows me to contribute significantly to GFT Technologies' data-driven success."
               />
               <ExperienceCard
+                category=''
                 title="ETL Developer"
                 company="GFT Technologies"
                 date="June 2022"
