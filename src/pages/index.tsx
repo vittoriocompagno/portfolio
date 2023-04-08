@@ -81,7 +81,7 @@ export default function Home() {
                 category="💡 Projects"
                 titles={["Machine Learning - Weather Forecasting App in Python"]}
                 companies={["Github - Jupyter Notebook"]}
-                dates={["2022/06 - present"]}
+                dates={["Feb 2023"]}
                 descriptions={[
                   "I programmed a Weather forecasting app with Python and the Prophet library. The app takes data from a .csv file and outputs its forecasting based on the Prophet model.",
                 ]}
@@ -108,8 +108,8 @@ export default function Home() {
                   "Universität Salzburg",
                 ]}
                 dates={[
-                  "2021/09 - 2023/10",
-                  "2021/09 - 2022/02",
+                  "Oct 2023",
+                  "Feb 2022",
                 ]}
                 descriptions={[
                   "Studied various aspects of computer engineering, including software development, hardware design, networking, and computer systems. Gained foundational knowledge in programming languages, algorithms, data structures, and computer organization.",
