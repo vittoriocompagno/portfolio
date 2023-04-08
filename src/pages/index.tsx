@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub, AiFillMail } from 'react-icons/ai';
 import Image from 'next/image';
 import deved from 'public/propic.jpeg';
 import { useState } from 'react';
 import ExperienceCard from '../pages/ExperienceCard';
 
 export default function Home() {
-  const [darkMode,setDarkMode] = useState(true);
+  const [darkMode,setDarkMode] = useState(true)
   return (
     <div className={darkMode?"dark":""}>
       <Head>
@@ -16,7 +16,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=' bg-slate-100 px-10 font-mono md:px-20 lg:px-40 dark:bg-slate-900 '>
+      <main className=' bg-slate-100 px-10 font-montserrat md:px-20 lg:px-40 dark:bg-slate-900 '>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 '>
             <div className='flex justify-between gap-10'>
@@ -34,7 +34,7 @@ export default function Home() {
           <div className= 'text-black dark:text-white text-center p-8 mx-auto max-w-2xl min-w-0'>
             <h1 className=' text-5xl text-teal-700 dark:text-teal-400 font-medium'>Vittorio Compagno</h1>
             <h3 className=' text-2xl pt-5 text-teal-700 dark:text-teal-400'>Developer</h3>
-            <div className='justify-center text-md md:text-justify py-4 leading-6 overflow-auto break-word'>  
+            <div className='justify-center text-xl md:text-justify py-4 leading-6 overflow-auto break-word'>  
               <p>
               Welcome to Vittorio Compagno's <b>portfolio website</b>: a vibrant hub where creativity meets code. I'm a software developer with a passion for crafting elegant solutions to complex problems.
               </p>
@@ -42,45 +42,93 @@ export default function Home() {
               <br /> Browse through my projects that demonstrate my expertise in cutting-edge technologies and commitment to delivering exceptional user experiences. <b> Let's collaborate and shape the future of technology, one line of code at a time! </b>
               </p>
             </div>
-            <div className='text-center mt-5'>
-              <button className='dark:hover:bg-blue-400 transition duration-200 text-xl bg-blue-500   text-white px-4 py-2 border-none rounded-md ml-4'>
-                <a className=' ' download href='./Vittorio_Compagno_Resume_04-2023.pdf'>
-                  Download my CV
-                </a>
-              </button>
-            </div>
-          </div>
-          <div className='flex justify-center text-4xl gap-10 p-10 py-1 text-gray-400 dark:text-teal-400'>
+            <div className='flex justify-center text-4xl gap-10 p-10 py-1 text-gray-400 dark:text-teal-400'>
               <a href="https://www.twitter.com/comradvittorio" target='_blank' >
                 <AiFillTwitterCircle className='cursor-pointer'/>
               </a>
               <a href="https://www.linkedin.com/in/vittorio-compagno" target='_blank'>
                 <AiFillLinkedin className='cursor-pointer'/>
               </a>
+              <a href="https://www.github.com/vittoriocompagno" target='_blank'>
+                <AiFillGithub className='cursor-pointer'/>
+              </a>
+              <a href="mailto:contacts@vittoriocompagno.com" target='_blank'>
+                <AiFillMail className='cursor-pointer'/>
+              </a>
+          </div>
+            <div className='text-center mt-10 mb-5'>
+              <button className='dark:hover:bg-blue-300 transition duration-200 text-xl bg-blue-500   text-white px-4 py-2 border-none rounded-md ml-4'>
+                <a className=' ' download href='./Vittorio_Compagno_Resume_04-2023.pdf'>
+                  Download my CV
+                </a>
+              </button>
             </div>
+          </div>
         </section>
         <section className='pt-5 pb-10 flex items-center justify-center'>
           <div className='grid grid-cols-1 gap-5'>
+            <div>
               <ExperienceCard
-                category='💻 Professional Experience'
-                title="ETL Developer"
-                company="GFT Technologies"
-                date="June 2022"
-                description="As an ETL Developer at GFT Technologies, my role revolves around managing data to empower our company's decision-making process. Utilizing Oracle SQL, Bash, Git, and Datastage, I focus on the extraction, transformation, and loading of complex data sets. By ensuring data is clean and well-integrated, I provide a solid foundation for our team to build upon. My expertise in these technologies, combined with a dedication to professionalism and accuracy, allows me to contribute significantly to GFT Technologies' data-driven success."
+                category="💻 Professional Experience"
+                titles={["ETL Developer"]}
+                companies={["GFT Technologies"]}
+                dates={["June 2022"]}
+                descriptions={[
+                  "As an ETL Developer at GFT Technologies, I excel in data management using Oracle SQL, Bash, Git, and Datastage for efficient extraction, transformation, and loading of complex data sets. My expertise and commitment to accuracy enable me to contribute significantly to GFT Technologies' data-driven success"                
+                ]}
               />
               <ExperienceCard
-                category=''
-                title="ETL Developer"
-                company="GFT Technologies"
-                date="June 2022"
-                description="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                category="💡 Projects"
+                titles={["Machine Learning - Weather Forecasting App in Python"]}
+                companies={["Github - Jupyter Notebook"]}
+                dates={["2022/06 - present"]}
+                descriptions={[
+                  "I programmed a Weather forecasting app with Python and the Prophet library. The app takes data from a .csv file and outputs its forecasting based on the Prophet model.",
+                ]}
+              />
+             <ExperienceCard
+                category="🖥️ Skills"
+                titles={["Software Skills", "Hardware Skills"]}
+                companies={['', '']}
+                dates={['', '']}
+                descriptions={[
+                  "SQL (PL-SQL, PostGreSQL), Python, Machine Learning, Data Analytics in R, Visualization in Tableau, Java, C, Bash Scripting, Git, MATLAB, Linux, IOT, Docker, DevOps processes, HTML, CSS",
+                  "Embedded Systems, Robotics fundamentals, Circuit Analysis, Signals, PC Hardware, Automated Systems, CPU Architecture"
+                ]}
+                />
+
+              <ExperienceCard
+                category="🎓 Education"
+                titles={[
+                  "🇮🇹 BSc. Computer Engineering",
+                  "🇪🇺 BSc. ERASMUS Informatik",
+                ]}
+                companies={[
+                  "UniPa",
+                  "Universität Salzburg",
+                ]}
+                dates={[
+                  "2021/09 - 2022/02",
+                  "2021/09 - 2022/02",
+                ]}
+                descriptions={[
+                  "Studied various aspects of computer engineering, including software development, hardware design, networking, and computer systems. Gained foundational knowledge in programming languages, algorithms, data structures, and computer organization.",
+                  "Exchange program at Universität Salzburg, Austria, focusing on computer science and informatics.",
+                ]}
               />
             </div>
+          </div>
+        </section>
+        <section>
+          <footer className="bg-slate-100 dark:bg-slate-900 py-8">
+            <div className="text-center">
+              <p className="text-black dark:text-white">
+                © {new Date().getFullYear()} Vittorio Compagno. All rights reserved.
+              </p>
+            </div>
+          </footer>
         </section>
 
-        <footer>
-
-        </footer>
       </main>
     </div>
   )
