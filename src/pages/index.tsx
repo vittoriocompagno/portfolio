@@ -34,7 +34,7 @@ export default function Home() {
           <div className= 'text-black dark:text-white text-center p-8 mx-auto max-w-2xl min-w-0'>
             <h1 className=' text-5xl text-teal-700 dark:text-teal-400 font-medium'>Vittorio Compagno</h1>
             <h3 className=' text-2xl pt-5 text-teal-700 dark:text-teal-400'>Developer</h3>
-            <div className='justify-center text-medium py-4 leading-6.5'>  
+            <div className='justify-center text-md md:text-justify py-4 leading-6 overflow-auto break-word'>  
               <p>
               Welcome to Vittorio Compagno's <b>portfolio website</b>: a vibrant hub where creativity meets code. I'm a software developer with a passion for crafting elegant solutions to complex problems.
               </p>
@@ -43,9 +43,11 @@ export default function Home() {
               </p>
             </div>
             <div className='text-center mt-5'>
-              <a className='text-xl bg-gradient-to-r from-blue-600 to-teal-700  text-white px-4 py-2 border-none rounded-md ml-4 ' download href='./Vittorio_Compagno_Resume_04-2023.pdf'>
-                Download my CV
-              </a>
+              <button className='dark:hover:bg-blue-400 transition duration-200 text-xl bg-blue-500   text-white px-4 py-2 border-none rounded-md ml-4'>
+                <a className=' ' download href='./Vittorio_Compagno_Resume_04-2023.pdf'>
+                  Download my CV
+                </a>
+              </button>
             </div>
           </div>
           <div className='flex justify-center text-4xl gap-10 p-10 py-1 text-gray-400 dark:text-teal-400'>
@@ -60,7 +62,7 @@ export default function Home() {
         <section className='pt-5 pb-10 flex items-center justify-center'>
           <div className='grid grid-cols-1 gap-5'>
               <ExperienceCard
-                category='Professional Experience'
+                category='💻 Professional Experience'
                 title="ETL Developer"
                 company="GFT Technologies"
                 date="June 2022"
