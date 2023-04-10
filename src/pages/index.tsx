@@ -16,7 +16,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=' bg-slate-100 px-10 font-montserrat md:px-20 lg:px-40 dark:bg-slate-900 '>
+      <main className=' bg-slate-100 px-10 font-mono md:px-20 lg:px-40 dark:bg-slate-900 '>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 '>
             <div className='flex justify-between gap-10'>
@@ -34,18 +34,15 @@ export default function Home() {
           <div className= 'text-black dark:text-white text-center p-8 mx-auto max-w-2xl min-w-0'>
             <h1 className=' text-5xl text-teal-700 dark:text-teal-400 font-medium'>Vittorio Compagno</h1>
             <h3 className=' text-2xl pt-5 text-teal-700 dark:text-teal-400'>Developer</h3>
-            <div className='justify-center text-xl md:text-justify py-4 leading-6 overflow-auto break-word'>  
+            <div className='justify-center text-xl text-justify py-4 leading-6 overflow-auto break-word'>  
               <p>
               Welcome to Vittorio Compagno's <b>portfolio website</b>: a vibrant hub where creativity meets code. I'm a software developer with a passion for crafting elegant solutions to complex problems.
               </p>
               <p>
-              <br /> Browse through my projects that demonstrate my expertise in cutting-edge technologies and commitment to delivering exceptional user experiences. <b> Let's collaborate and shape the future of technology, one line of code at a time! </b>
+              <br /> Browse through my projects! <br />Let's collaborate and shape the future of technology, one line of code at a time!
               </p>
             </div>
-            <div className='flex justify-center text-4xl gap-10 p-10 py-1 text-gray-400 dark:text-teal-400'>
-              <a href="https://www.twitter.com/comradvittorio" target='_blank' >
-                <AiFillTwitterCircle className='cursor-pointer'/>
-              </a>
+            <div className='flex justify-center text-4xl gap-16 mt-7 text-gray-500 dark:text-teal-400'>
               <a href="https://www.linkedin.com/in/vittorio-compagno" target='_blank'>
                 <AiFillLinkedin className='cursor-pointer'/>
               </a>
@@ -57,8 +54,8 @@ export default function Home() {
               </a>
           </div>
             <div className='text-center mt-10 mb-5'>
-              <button className='dark:hover:bg-blue-300 transition duration-200 text-xl bg-blue-500   text-white px-4 py-2 border-none rounded-md ml-4'>
-                <a className=' ' download href='./Vittorio_Compagno_Resume_04-2023.pdf'>
+              <button className='text-xl bg-blue-500   text-white px-5 py-3 border-none rounded-lg '>
+                <a className=' ' download href='./Vittorio_Compagno_Resume_2023.pdf'>
                   Download my CV
                 </a>
               </button>
@@ -68,35 +65,39 @@ export default function Home() {
         <section className='pt-5 pb-10 flex items-center justify-center'>
           <div className='grid grid-cols-1 gap-5'>
             <div>
-              <ExperienceCard
-                category="💻 Professional Experience"
-                titles={["ETL Developer"]}
-                companies={["GFT Technologies"]}
-                dates={["June 2022"]}
-                descriptions={[
-                  "As an ETL Developer at GFT Technologies, I excel in data management using Oracle SQL, Bash, Git, and Datastage for efficient extraction, transformation, and loading of complex data sets. My expertise and commitment to accuracy enable me to contribute significantly to GFT Technologies' data-driven success"                
-                ]}
-              />
-              <ExperienceCard
+            <ExperienceCard
                 category="💡 Projects"
-                titles={["Machine Learning - Weather Forecasting App in Python"]}
-                companies={["Github - Jupyter Notebook"]}
-                dates={["Feb 2023"]}
+                titles={["🤖 Weather Forecasting app", "💻 Portfolio Website"]}
+                companies={["Python", "React,Next.js,TailwindCSS,HTML"]}
+                dates={[]}
                 descriptions={[
-                  "I programmed a Weather forecasting app with Python and the Prophet library. The app takes data from a .csv file and outputs its forecasting based on the Prophet model.",
+                  "I programmed a Weather forecasting app with Python using the Prophet library. The app takes data from a .csv file and outputs its forecasting based on Prophet. You can find it on my Github!",
+                  "You're here already! I hope you enjoy it, it's been made with React, Next.js and TailwindCSS. All hosted on Vercel"
                 ]}
               />
              <ExperienceCard
                 category="🖥️ Skills"
-                titles={["Software Skills", "Hardware Skills"]}
-                companies={['', '']}
-                dates={['', '']}
+                titles={["Machine Learning", "Object Oriented Programming","Big Data and Cloud","Development and Versioning","Web Development","Automation"]}
+                companies={[]}
+                dates={[]}
                 descriptions={[
-                  "SQL (PL-SQL, PostGreSQL), Python, Machine Learning, Data Analytics in R, Visualization in Tableau, Java, C, Bash Scripting, Git, MATLAB, Linux, IOT, Docker, DevOps processes, HTML, CSS",
-                  "Embedded Systems, Robotics fundamentals, Circuit Analysis, Signals, PC Hardware, Automated Systems, CPU Architecture"
+                  "Python, Pandas, Jupyter Notebooks, Clustering, Markov Chains",
+                  "Python, Java, JS, Golang (basics)",
+                  "SQL (PL-SQL, PostrGre), Basics of AWS, Cloud Computing, Cassandra, Docker",
+                  "Git, VSCode, Debugging, Testing, QA testing",
+                  "HTML, CSS, JavaScript, React, Next.js, TailwindCSS",
+                  "Bash, C, Robotics Fundamentals"
                 ]}
                 />
-
+              <ExperienceCard
+                category="💻 Professional Experience"
+                titles={["Software Developer"]}
+                companies={["GFT Technologies"]}
+                dates={["June 2022-Present"]}
+                descriptions={[
+                  "As a Software Developer at GFT Technologies, I excel in data management using Oracle SQL, Bash, Git, and Datastage for efficient extraction, transformation, and loading of complex data sets. My expertise and commitment to accuracy enable me to contribute significantly to GFT Technologies' data-driven success"                
+                ]}
+              />
               <ExperienceCard
                 category="🎓 Education"
                 titles={[
@@ -112,10 +113,20 @@ export default function Home() {
                   "Feb 2022",
                 ]}
                 descriptions={[
-                  "Studied various aspects of computer engineering, including software development, hardware design, networking, and computer systems. Gained foundational knowledge in programming languages, algorithms, data structures, and computer organization.",
-                  "Exchange program at Universität Salzburg, Austria, focusing on computer science and informatics.",
+                  "",
+                  ""
                 ]}
               />
+              <ExperienceCard
+                category="📚 Languages"
+                titles={["Full working Proficiency"," Limited working Proficiency"]}
+                companies={[]}
+                dates={[]}
+                descriptions={[
+                  "🇮🇹 Italian | 🇬🇧 English ", 
+                  "🇩🇪 German"
+               ]}
+              />              
             </div>
           </div>
         </section>
