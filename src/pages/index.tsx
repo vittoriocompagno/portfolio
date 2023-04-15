@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { AiFillTwitterCircle, AiFillLinkedin, AiFillGithub, AiFillMail } from 'react-icons/ai';
+import { AiFillLinkedin, AiFillGithub, AiFillMail } from 'react-icons/ai';
 import Image from 'next/image';
 import deved from 'public/propic.jpeg';
 import { useState } from 'react';
 import ExperienceCard from '../pages/ExperienceCard';
-
+import { BiMenuAltRight } from 'react-icons/bi';
 export default function Home() {
   const [darkMode,setDarkMode] = useState(true)
   return (
@@ -20,11 +20,16 @@ export default function Home() {
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 '>
             <div className='flex justify-between gap-10'>
-              <div className='order-1'>
+              <div className='order-2'>
                <h1 className=' text-black dark:text-teal-400 text-sm'>Developed by Vittorio Compagno</h1>
               </div>
-              <div className='order-2'>
+              <div className='order-1'>
                 <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer dark:text-white text-black text-xl'/>
+              </div>
+              <div className='order-3'>
+                <a href="##">
+                <BiMenuAltRight className='dark:text-white text-black text-3xl'/>
+                </a>
               </div>
             </div>
           </nav>
@@ -34,9 +39,9 @@ export default function Home() {
           <div className= 'text-black dark:text-white text-center p-8 mx-auto max-w-2xl min-w-0'>
             <h1 className=' text-5xl text-teal-700 dark:text-teal-400 font-medium'>Vittorio Compagno</h1>
             <h3 className=' text-2xl pt-5 text-teal-700 dark:text-teal-400'>Developer</h3>
-            <div className='justify-center text-xl text-justify py-4 leading-6 overflow-auto break-word'>  
+            <div className=' justify-center text-lg py-4 leading-6 overflow-auto break-word'>  
               <p>
-              Welcome to Vittorio Compagno's <b>portfolio website</b>: a vibrant hub where creativity meets code. I'm a software developer with a passion for crafting elegant solutions to complex problems.
+              Welcome to my <b>portfolio website</b>! <br/> I'm a software developer with a passion for crafting elegant solutions to complex problems.
               </p>
               <p>
               <br /> Browse through my projects! <br />Let's collaborate and shape the future of technology, one line of code at a time!
@@ -54,7 +59,7 @@ export default function Home() {
               </a>
           </div>
             <div className='text-center mt-10 mb-5'>
-              <button className='text-xl bg-blue-500   text-white px-5 py-3 border-none rounded-lg '>
+              <button className='text-xl bg-blue-500  text-white px-5 py-3 border-none rounded-lg '>
                 <a className=' ' download href='./Vittorio_Compagno_Resume_2023.pdf'>
                   Download my CV
                 </a>
@@ -77,7 +82,7 @@ export default function Home() {
               />
              <ExperienceCard
                 category="🖥️ Skills"
-                titles={["Machine Learning", "Object Oriented Programming","Big Data and Cloud","Development and Versioning","Web Development","Automation"]}
+                titles={["### Machine Learning ###", "### Object Oriented Programming ###","### Big Data and Cloud ###","### Development and Versioning ###","### Web Development ###","### Automation ###"]}
                 companies={[]}
                 dates={[]}
                 descriptions={[
@@ -102,11 +107,11 @@ export default function Home() {
                 category="🎓 Education"
                 titles={[
                   "🇮🇹 BSc. Computer Engineering",
-                  "🇪🇺 BSc. ERASMUS Informatik",
+                  "🇪🇺 ERASMUS Informatik",
                 ]}
                 companies={[
-                  "UniPa",
-                  "Universität Salzburg",
+                  "UniPa,",
+                  "Universität PLUS Salzburg,",
                 ]}
                 dates={[
                   "Oct 2022",
@@ -123,7 +128,7 @@ export default function Home() {
                 companies={[]}
                 dates={[]}
                 descriptions={[
-                  "🇮🇹 Italian | 🇬🇧 English ", 
+                  "🇮🇹 Italian , 🇬🇧 English ", 
                   "🇩🇪 German"
                ]}
               />              
